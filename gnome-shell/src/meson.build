@@ -39,7 +39,15 @@ theme_sources = files([
 	'gnome-shell-sass/widgets/_tiled-previews.scss',
 	'gnome-shell-sass/widgets/_window-picker.scss',
 	'gnome-shell-sass/widgets/_workspace-switcher.scss',
-	'gnome-shell-sass/widgets/_workspace-thumbnails.scss'
+	'gnome-shell-sass/widgets/_workspace-thumbnails.scss',
+	'overlay/_colors.scss',
+	'overlay/_common.scss',
+	'overlay/_widgets.scss',
+	'overlay/widgets/_app_grid.scss',
+	'overlay/widgets/_calendar.scss',
+	'overlay/widgets/_dash.scss',
+	'overlay/widgets/_login-dialog.scss',
+	'overlay/widgets/_panel.scss'
 ])
 
 styles = [

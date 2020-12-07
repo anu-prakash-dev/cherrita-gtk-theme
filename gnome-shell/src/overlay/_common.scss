@@ -1,0 +1,5 @@
+$base_font_size: 10;
+
+stage {
+  @include fontsize($base_font_size);
+}

@@ -1,6 +1,9 @@
 $variant: 'dark';
 
 @import "gnome-shell-sass/_colors"; //use gtk colors
+@import "overlay/_colors";
 @import "gnome-shell-sass/_drawing";
 @import "gnome-shell-sass/_common";
+@import "overlay/_common";
 @import "gnome-shell-sass/_widgets";
+@import "overlay/_widgets";

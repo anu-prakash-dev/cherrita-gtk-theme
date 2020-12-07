@@ -1,0 +1,66 @@
+/* Top Bar */
+// a.k.a. the panel
+
+$panel_height: 2em;
+
+#panel {
+  background-color: $bg_color;
+  font-weight: bold;
+  font-size: .95em;
+  padding: 2px;
+  height: $panel_height;
+  font-feature-settings: "tnum";
+  border: $borders_color 1px solid;
+  border-left: none;
+  border-right: none;
+  box-shadow: inset 0 1px lighten($bg_color, 5%);
+
+  // transparent panel on lock & login screens
+  &.unlock-screen,
+  &.login-screen {
+    background-color: transparent;
+    border: none;
+  }
+
+  // spacing between activities, app menu and such
+  #panelLeft, #panelCenter {
+    spacing: $base_spacing;
+  }
+
+  // the rounded outset corners
+  .panel-corner {
+    -panel-corner-radius: 0;
+    -panel-corner-background-color: transparent;
+    -panel-corner-border-color: transparent;
+  }
+
+  // panel menus
+  .panel-button {
+    font-weight: bold;
+    color: $fg_color;
+    -natural-hpadding: $base_padding * 1.5;
+    -minimum-hpadding: $base_padding;
+
+    &:hover {
+      color: lighten($fg_color, 20%);
+    }
+
+    &:active, &:overview, &:focus, &:checked {
+      color: lighten($fg_color, 20%);
+    }
+
+    // status area icons
+    .system-status-icon {
+      icon-size: $base_icon_size;
+      padding: $base_padding - 1px;
+    }
+
+    // app menu icon
+    .app-menu-icon {
+      margin-left: 0;
+      margin-right: ($base_margin * 2);
+      -st-icon-style: symbolic;
+      // dimensions of the icon are hardcoded
+    }
+  }
+}

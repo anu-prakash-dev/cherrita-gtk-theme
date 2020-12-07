@@ -1,0 +1,22 @@
+
+.events-section-title {
+    color: darken($fg_color, 10%);
+}
+
+.events-button {
+    .events-title {
+      color: darken($fg_color,40%);
+    }
+}
+
+.world-clocks-button {
+    .world-clocks-header {
+      color: darken($fg_color,40%);
+    }
+}
+
+.weather-button {
+    .weather-header {
+      color: darken($fg_color,40%);
+    }
+}

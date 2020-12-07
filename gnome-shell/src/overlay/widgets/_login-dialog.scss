@@ -1,0 +1,8 @@
+.login-dialog,
+.unlock-dialog {
+  StEntry {
+      @if $variant=='dark' {
+        background-color: transparentize(lighten(#241f31, 2%), 0.5);;
+      }
+  }
+}
