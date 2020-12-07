@@ -1,0 +1,7 @@
+<gresources>
+  <gresource prefix="/io/nullxception/theme/Cherrita">
+    <file alias="gtk.css">gtk.gresource.css</file>
+    <file alias="gtk-dark.css">gtk-dark.gresource.css</file>
+    @ASSETS@
+  </gresource>
+</gresources>
