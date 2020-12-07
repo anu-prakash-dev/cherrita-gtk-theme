@@ -7,7 +7,9 @@
 $variant: 'light';
 
 @import 'colors';
+@import 'overlay/colors';
 @import 'drawing';
 @import 'properties';
 @import 'common';
+@import 'overlay/common';
 @import 'colors-public';
