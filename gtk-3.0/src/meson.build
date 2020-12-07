@@ -9,6 +9,7 @@ gtk3_variant = [
 gtk3_scss_dependencies = [
   '_colors-public.scss',
   '_colors.scss',
+  '_properties.scss',
   '_common.scss',
   '_drawing.scss',
 ]
