@@ -1,24 +1,23 @@
-$base_color: if($variant == 'light', #f6f5f4, darken(#23232F, 3%));
-$bg_color: if($variant == 'light', #eeeeec, #23232F);
-$fg_color: if($variant == 'light', #23232F, #eeeeec);
-$accent_color: #f56Ab4;
+$base_color: if($variant == 'light', $colorWhite, darken($colorBackground, 3%));
+$bg_color: if($variant == 'light', $colorForeground, $colorBackground);
+$fg_color: if($variant == 'light', $colorBackground, $colorForeground);
 
-$selected_fg_color: #fff;
-$selected_bg_color: if($variant == 'light', lighten($accent_color, 10%), mix($bg_color, $accent_color, 15%));
+$selected_fg_color: $colorWhite;
+$selected_bg_color: if($variant == 'light', lighten($colorRed, 10%), mix($bg_color, $colorRed, 15%));
 $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
 $borders_color: if($variant == 'light', darken($bg_color, 18%), darken($bg_color, 8%));
 $borders_edge: if($variant == 'light', rgba(255,255,255,0.8), transparentize($fg_color, 0.93));
-$link_color: if($variant == 'light', darken(#3584e4, 10%), lighten(#3584e4, 20%));
+$link_color: if($variant == 'light', darken($colorBlue, 10%), lighten($colorBlue, 20%));
 $link_visited_color: if($variant == 'light', darken($link_color, 20%), lighten($link_color, 10%));
 $top_hilight: $borders_edge;
 
-$warning_color: #f57900;
-$error_color: #ff8080;
-$success_color: if($variant == 'light', #33d17a, darken(#33d17a, 10%));
-$destructive_color: if($variant == 'light', #e01b24, darken(#e01b24, 10%));
+$warning_color: $colorYellow;
+$error_color: darken($colorYellow, 5%);
+$success_color: if($variant == 'light', $colorGreen, darken($colorGreen, 10%));
+$destructive_color: if($variant == 'light', darken($colorRed, 10%), darken($colorRed, 20%));
 
-$osd_fg_color: #eeeeec;
-$osd_text_color: white;
+$osd_fg_color: $fg_color;
+$osd_text_color: $colorWhite;
 $osd_bg_color: transparentize($bg_color, 0.05);
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);

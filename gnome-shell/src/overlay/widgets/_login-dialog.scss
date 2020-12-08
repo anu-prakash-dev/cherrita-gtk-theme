@@ -2,7 +2,7 @@
 .unlock-dialog {
   StEntry {
       @if $variant=='dark' {
-        background-color: transparentize(lighten(#241f31, 2%), 0.5);;
+        background-color: transparentize(lighten($colorBackground, 2%), 0.5);;
       }
   }
 }

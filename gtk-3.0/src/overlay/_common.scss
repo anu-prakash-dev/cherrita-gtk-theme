@@ -106,9 +106,9 @@ button.titlebutton {
 
   &.close, &.minimize, &.maximize {
     color: transparent;
-    background-image: gtk_circle(#6a7ff5, .9);
+    background-image: gtk_circle($colorBlue, .9);
   }
   &.close {
-    background-image: gtk_circle(#f56Ab4, .9);
+    background-image: gtk_circle($colorRed, .9);
   }
 }
