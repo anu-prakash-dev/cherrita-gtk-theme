@@ -81,7 +81,7 @@ foreach style: styles
 	)
 endforeach
 
-gresource_xml = files('data/gnome-shell-theme.gresource.xml')[0]
+gresource_xml = files('gnome-shell-theme.gresource.xml')[0]
 gresource_installdir = join_paths(gnome_shell_themedir, theme_name)
 gnome.compile_resources(
 	'gnome-shell-theme',
