@@ -1,0 +1,5 @@
+.toggle-switch {
+  &:checked {
+    background-image: if($variant == 'light', url("resource:///org/gnome/shell/theme/toggle-on.svg"),url("resource:///org/gnome/shell/theme/toggle-on-dark.svg"));
+  }
+}
