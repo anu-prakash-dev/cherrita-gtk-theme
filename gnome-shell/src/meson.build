@@ -1,3 +1,5 @@
+compile_gresource = get_option('gnome-shell-gresource')
+
 theme_sources = files([
 	'gnome-shell-high-contrast.scss',
 	'gnome-shell.scss',
@@ -50,6 +52,38 @@ theme_sources = files([
 	'overlay/widgets/_panel.scss'
 ])
 
+assets_sources = files([
+	'pad-osd.css',
+	'calendar-today.svg',
+	'checkbox-off.svg',
+	'checkbox-focused.svg',
+	'checkbox-off-focused.svg',
+	'checkbox.svg',
+	'color-pick.svg',
+	'dash-placeholder.svg',
+	'eye-not-looking-symbolic.svg',
+	'eye-open-negative-filled-symbolic.svg',
+	'keyboard-caps-lock-filled-symbolic.svg',
+	'keyboard-enter-symbolic.svg',
+	'keyboard-hide-symbolic.svg',
+	'keyboard-layout-filled-symbolic.svg',
+	'keyboard-shift-filled-symbolic.svg',
+	'message-indicator-symbolic.svg',
+	'no-events.svg',
+	'no-notifications.svg',
+	'pointer-double-click-symbolic.svg',
+	'pointer-drag-symbolic.svg',
+	'pointer-primary-click-symbolic.svg',
+	'pointer-secondary-click-symbolic.svg',
+	'process-working.svg',
+	'running-indicator.svg',
+	'toggle-off-dark.svg',
+	'toggle-off-hc.svg',
+	'toggle-off.svg',
+	'toggle-on-hc.svg',
+	'toggle-on-dark.svg',
+	'toggle-on.svg',
+])
 styles = [
 	'gnome-shell-high-contrast',
 	'gnome-shell'
@@ -75,19 +109,24 @@ foreach style: styles
 			sassc, '-a', '@INPUT@', '@OUTPUT@',
 			'-I', css_sources_path,
 		],
-		install:true,
+		install: not compile_gresource,
 		install_dir: gnome_shell_oldthemedir,
 		depend_files: theme_sources,
 	)
 endforeach
 
-gresource_xml = files('gnome-shell-theme.gresource.xml')[0]
-gresource_installdir = join_paths(gnome_shell_themedir, theme_name)
-gnome.compile_resources(
-	'gnome-shell-theme',
-	gresource_xml,
-	dependencies: style_css,
-	gresource_bundle: true,
-	install: true,
-	install_dir: gresource_installdir,
-)
+if compile_gresource
+	gresource_xml = files('gnome-shell-theme.gresource.xml')[0]
+	gresource_installdir = join_paths(gnome_shell_themedir, theme_name)
+	gnome.compile_resources(
+		'gnome-shell-theme',
+		gresource_xml,
+		dependencies: style_css,
+		gresource_bundle: true,
+		install: true,
+		install_dir: gresource_installdir,
+	)
+else
+	# install assets
+	install_data(assets_sources, install_dir: gnome_shell_oldthemedir)
+endif

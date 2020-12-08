@@ -1,0 +1,1 @@
+option('gnome-shell-gresource', type: 'boolean', value: false, description: 'compile gresource')
