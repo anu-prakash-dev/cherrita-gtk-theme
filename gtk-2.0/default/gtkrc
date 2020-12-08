@@ -14,15 +14,15 @@
 # Text/base
 gtk-color-scheme = "text_color:black\nbase_color:white"
 # Foreground/background
-gtk-color-scheme = "fg_color:#2e3436\nbg_color:#e8e8e7"
+gtk-color-scheme = "fg_color:#2F2F40\nbg_color:#e8e8e7"
 # Selected foreground/background
-gtk-color-scheme = "selected_fg_color:#ffffff\nselected_bg_color:#4a90d9"
+gtk-color-scheme = "selected_fg_color:#ffffff\nselected_bg_color:#FE568E"
 # Insensitive foreground/background
 gtk-color-scheme = "insensitive_fg_color:#8b8e8f\ninsensitive_bg_color:#f1f1f1"
 # Menus
-gtk-color-scheme = "menu_color:white"
+gtk-color-scheme = "menu_color:#EDF1F3"
 # Links
-gtk-color-scheme = "link_color:#2a76c6\nvisited_link_color:#215d9c"
+gtk-color-scheme = "link_color:#73A9FF\nvisited_link_color:#FF568E"
 # Treeview headers
 gtk-color-scheme = "column_header_color:#979a9b\nhover_column_header_color:#636769"
 # Window decoration

@@ -1497,9 +1497,9 @@ style "default" {
 
 style "menubar" {
 
-  # Needed to fix Firefox's menubar text
-  bg[SELECTED] = @selected_fg_color
-  fg[SELECTED] = @link_color
+  bg[NORMAL]   = @menu_color
+  bg[SELECTED] = @menu_color
+  fg[SELECTED] = @fg_color
 
 }
 
