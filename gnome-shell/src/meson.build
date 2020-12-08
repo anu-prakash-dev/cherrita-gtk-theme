@@ -129,4 +129,5 @@ if compile_gresource
 else
 	# install assets
 	install_data(assets_sources, install_dir: gnome_shell_oldthemedir)
+	meson.add_install_script('fix-asset-link.sh', meson.project_name())
 endif
