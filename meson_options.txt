@@ -1,1 +1,3 @@
-option('gnome-shell-gresource', type: 'boolean', value: false, description: 'compile gresource')
+option('gtk', type: 'boolean', value: true, description: 'build gtk theme')
+option('gnome-shell', type: 'boolean', value: true, description: 'build gnome-shell theme')
+option('gnome-shell-gresource', type: 'boolean', value: false, description: 'build gnome-shell theme as gresource')
